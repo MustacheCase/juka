@@ -3,4 +3,6 @@ google-generativeai==0.3.2
 requests==2.31.0
 python-dotenv==1.0.1
 schedule==1.2.1
-spotipy==2.23.0 
+spotipy==2.23.0
+pytest==8.0.0
+pytest-mock==3.12.0 
