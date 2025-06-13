@@ -3,6 +3,7 @@ name: Daily Run
 on:
   schedule:
     - cron: '0 5 * * *'  # 8AM IDT (UTC+3) = 5AM UTC
+  workflow_dispatch:      # Enables manual run from GitHub UI
 
 jobs:
   run-program:
