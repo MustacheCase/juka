@@ -194,3 +194,23 @@ cython_debug/
 .cursorindexingignore
 
 .DS_Store
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
