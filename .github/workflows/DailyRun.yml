@@ -19,11 +19,40 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir -r requirements.txt
           pip install --no-cache-dir beautifulsoup4
+      - name: Verify environment variables
+        run: |
+          echo "Checking environment variables..."
+          if [ -n "$GENIUS_ACCESS_TOKEN" ]; then
+            echo "GENIUS_ACCESS_TOKEN is set"
+          else
+            echo "GENIUS_ACCESS_TOKEN is not set"
+          fi
+          if [ -n "$SPOTIFY_CLIENT_ID" ]; then
+            echo "SPOTIFY_CLIENT_ID is set"
+          else
+            echo "SPOTIFY_CLIENT_ID is not set"
+          fi
+          if [ -n "$SPOTIFY_CLIENT_SECRET" ]; then
+            echo "SPOTIFY_CLIENT_SECRET is set"
+          else
+            echo "SPOTIFY_CLIENT_SECRET is not set"
+          fi
+          if [ -n "$GOOGLE_API_KEY" ]; then
+            echo "GOOGLE_API_KEY is set"
+          else
+            echo "GOOGLE_API_KEY is not set"
+          fi
+          if [ -n "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "TELEGRAM_BOT_TOKEN is set"
+          else
+            echo "TELEGRAM_BOT_TOKEN is not set"
+          fi
       - name: Run program
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          GENIUS_ACCESS_TOKEN: ${{ secrets.GENIUS_ACCESS_TOKEN }}
         run: |
           python main.py
