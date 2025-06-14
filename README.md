@@ -1,6 +1,21 @@
-# One Song Each Day Bot
+# One Song A Day
 
-A Telegram bot that posts a random song each day with information about the song and artist.
+Get a daily dose of music! Join our Telegram channel to receive a new song every day, complete with artist information and insights.
+
+## Join Now
+
+📱 [Join our Telegram channel](https://t.me/mustachecasejuka) to start receiving daily song recommendations!
+
+## What You'll Get
+
+- A new song every day at 9:00 AM
+- Detailed information about the song and artist
+- AI-generated insights about the music
+- Direct Spotify links to listen to the songs
+
+## For Developers
+
+This project is a Telegram bot that automatically posts daily song recommendations. If you're interested in the technical details or want to contribute, check out the [project structure](#project-structure) below.
 
 ## Features
 
