@@ -1,4 +1,8 @@
-# One Song A Day
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9cb870d1-da95-408f-9582-375dd3c53a5b" alt="juka">
+</p>
+
+## One Song A Day
 
 Get a daily dose of music! Join our Telegram channel to receive a new song every day, complete with artist information and insights.
 
