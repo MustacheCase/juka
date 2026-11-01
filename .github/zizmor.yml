@@ -1,0 +1,12 @@
+rules:
+  # ZanadirScan.yml is hardened in #9; drop these two once it merges.
+  unpinned-uses:
+    ignore:
+      - ZanadirScan.yml
+  excessive-permissions:
+    ignore:
+      - ZanadirScan.yml
+  # The badge job in ZanadirScan.yml pushes to the badges branch, so it keeps its credentials.
+  artipacked:
+    ignore:
+      - ZanadirScan.yml
