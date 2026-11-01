@@ -1,7 +1,10 @@
+from unittest.mock import AsyncMock, Mock
+
 import pytest
-from unittest.mock import Mock, patch, AsyncMock
 from telegram.error import TelegramError
+
 from src.services.telegram_service import TelegramService
+
 
 @pytest.fixture
 def telegram_service():

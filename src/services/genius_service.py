@@ -1,6 +1,6 @@
 import logging
+
 import requests
-from typing import Dict, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +16,7 @@ class GeniusService:
             "User-Agent": "OneSongEachDay/1.0"
         }
 
-    def get_song_info(self, song_name: str, artist_name: str) -> Optional[Dict]:
+    def get_song_info(self, song_name: str, artist_name: str) -> dict | None:
         """
         Get song information from Genius API.
         Returns a dictionary with song information or None if not found.
@@ -75,7 +75,7 @@ class GeniusService:
             logger.error(f"Unexpected error in Genius service: {e}")
             return None
 
-    def format_info(self, info: Dict) -> str:
+    def format_info(self, info: dict) -> str:
         """
         Format the song information into a readable string.
         """

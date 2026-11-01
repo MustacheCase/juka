@@ -6,20 +6,26 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions: {}
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          python-version: '3.9'
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install --no-cache-dir -r requirements.txt
-          pip install --no-cache-dir beautifulsoup4 pytest-asyncio
-      - name: Run tests
+          pip install --no-cache-dir beautifulsoup4 pytest-asyncio pytest-cov==7.1.0
+      - name: Run tests with coverage
         run: |
-          python -m pytest -v 
+          python -m pytest -v --cov=src --cov-report=term-missing --cov-fail-under=77

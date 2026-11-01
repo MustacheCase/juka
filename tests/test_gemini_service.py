@@ -1,6 +1,9 @@
+from unittest.mock import Mock
+
 import pytest
-from unittest.mock import Mock, patch
+
 from src.services.gemini_service import GeminiService
+
 
 @pytest.fixture
 def gemini_service():

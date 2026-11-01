@@ -1,7 +1,10 @@
-import pytest
 from unittest.mock import Mock, patch
+
+import pytest
 from spotipy.exceptions import SpotifyException
+
 from src.services.spotify_service import SpotifyService
+
 
 @pytest.fixture
 def mock_spotify_client():

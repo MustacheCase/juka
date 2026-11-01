@@ -1,9 +1,8 @@
-import logging
 import asyncio
+import logging
+
 from telegram import Bot
 from telegram.error import TelegramError
-from typing import Dict
-from src.utils.config import TELEGRAM_CHANNEL_ID
 
 logger = logging.getLogger(__name__)
 
@@ -43,7 +42,7 @@ class TelegramService:
         message = f"❌ Error in Daily Song Bot:\n\n{error_message}"
         self.send_message(message)
         
-    def send_song_info(self, song: Dict, genius_info: Dict, summary: str) -> None:
+    def send_song_info(self, song: dict, genius_info: dict, summary: str) -> None:
         """
         Send song information to the Telegram channel.
         """

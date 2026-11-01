@@ -1,7 +1,9 @@
-import pytest
-from unittest.mock import Mock, patch, MagicMock
 import os
-from src.utils.config import Config, init_services
+
+import pytest
+
+from src.utils.config import Config
+
 
 @pytest.fixture
 def config():

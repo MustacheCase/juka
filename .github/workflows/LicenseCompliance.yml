@@ -6,15 +6,20 @@ on:
       - main
   pull_request:
 
+permissions: {}
+
 jobs:
   license-compliance-scan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
       - name: License Compliance Scan
-        uses: fossas/fossa-action@main
+        uses: fossas/fossa-action@29693cc50323968e039056be419b32989fc5880c # v2.0.0
         with:
           api-key: ${{ secrets.FOSSA_API_KEY }}
