@@ -1,5 +1,6 @@
-import random
 import logging
+import random
+
 from spotipy.exceptions import SpotifyException
 
 logger = logging.getLogger(__name__)
@@ -22,7 +23,7 @@ class SpotifyService:
             # Try a simple API call to test the connection
             logger.info("Testing Spotify connection...")
             logger.info(f"Using client ID: {self.sp._auth_manager.client_id}")
-            results = self.sp.search('test', limit=1)
+            self.sp.search('test', limit=1)
             logger.info("Successfully connected to Spotify API")
         except SpotifyException as e:
             if e.http_status == 403:

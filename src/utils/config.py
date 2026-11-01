@@ -1,9 +1,10 @@
-import os
 import logging
+import os
+
+import google.generativeai as genai
 from dotenv import load_dotenv
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
-import google.generativeai as genai
 from telegram import Bot
 
 # Load environment variables

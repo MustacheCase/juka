@@ -1,6 +1,8 @@
-import pytest
 import os
 from unittest.mock import Mock
+
+import pytest
+
 
 @pytest.fixture(autouse=True)
 def mock_env_vars():

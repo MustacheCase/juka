@@ -1,23 +1,22 @@
+import logging
 import os
 import random
-import requests
-from bs4 import BeautifulSoup
+import sys
+
 import google.generativeai as genai
-from telegram import Bot
-import schedule
-import time
-from dotenv import load_dotenv
-import logging
-from datetime import datetime
+import requests
 import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 from spotipy import Spotify
-from src.utils.config import init_services, logger, Config
-from src.services.spotify_service import SpotifyService
-from src.services.telegram_service import TelegramService
+from spotipy.oauth2 import SpotifyClientCredentials
+from telegram import Bot
+
 from src.services.gemini_service import GeminiService
 from src.services.genius_service import GeniusService
-import sys
+from src.services.spotify_service import SpotifyService
+from src.services.telegram_service import TelegramService
+from src.utils.config import Config
 
 # Configure logging
 logging.basicConfig(

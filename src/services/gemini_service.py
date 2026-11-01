@@ -1,6 +1,6 @@
 import logging
+
 import google.generativeai as genai
-from typing import Dict
 
 logger = logging.getLogger(__name__)
 
@@ -12,7 +12,7 @@ class GeminiService:
         genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel(model_name="gemini-1.5-flash")
         
-    def summarize_info(self, song: Dict, genius_info: Dict) -> str:
+    def summarize_info(self, song: dict, genius_info: dict) -> str:
         """
         Generate a summary of the song information using Gemini.
         """

@@ -1,7 +1,10 @@
-import pytest
 from unittest.mock import Mock, patch
+
+import pytest
 import requests
+
 from src.services.genius_service import GeniusService
+
 
 @pytest.fixture
 def genius_service():
