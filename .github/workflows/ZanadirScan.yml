@@ -18,6 +18,8 @@ jobs:
       - uses: mustachecase/zanadir-action@410eb02c0c1ef382e9234cb9d1da2ffc4cea88be # v1.36
         with:
           dir: .
+          # A daily batch job: no service to load-test, no image for EOL tools.
+          excluded-categories: End Of Life,Performance Testing
 
   # Publishes the score for the README badge, from the default branch only.
   badge:
@@ -26,10 +28,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Checkout
+        # zizmor: ignore[artipacked] - this job pushes the badge, so it keeps the checkout credential.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: mustachecase/zanadir-action@410eb02c0c1ef382e9234cb9d1da2ffc4cea88be # v1.36
         with:
           dir: .
+          # A daily batch job: no service to load-test, no image for EOL tools.
+          excluded-categories: End Of Life,Performance Testing
           badge: zanadir-badge.json
       - name: Publish the badge when it moved
         run: |
