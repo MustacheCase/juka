@@ -4,6 +4,8 @@
 
 ## One Song A Day
 
+[![zanadir](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MustacheCase/juka/badges/zanadir-badge.json)](https://mustachecase.github.io/scan/?repo=MustacheCase/juka)
+
 Get a daily dose of music! Join our Telegram channel to receive a new song every day, complete with artist information and insights.
 
 ## Join Now
